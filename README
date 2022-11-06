@@ -1,0 +1,22 @@
+
+**Nume:Miruna Aldica**
+
+  ### Descriere:
+  
+OBSERVATIE
+In cadrul acestei teme am folosit implementarea facuta in timpul laboratorului
+* In cadrul acestei teme a trebuit sa creez o librarile pentru diversi utilizatori in care acestia sa poata imprumuta carti si sa le returneze, si in care putem adauga si sterge carti. 
+* Am folosit in implementarea mea un hastable generic iar structura bibliotecii a aratat in felul urmator: o structura de tip hashtable database care tine numele cartilor si o structura de tip bookInfo care are datele, respectiv un hashtable users care tine o structura de tip userInfo. 
+* Structura de tip bookInfo are un nume, un rating in care tin suma ratingurilor, numarul de imprumuturi, un flag pentru a marca daca cartea se paote imprumuta si un hashtable cu definitii care tine 2 stringuri pentru definitii. 
+* Structura de tip userInfo are un nume, flaguri pentru a marca daca are o carte imprumutat in prezent si pentru a marca daca e banat, un string in care tin numele cartii imprumutate curent, un numar de zile pe care e imprumutata cartea curenta si un numar de puncte curent.
+* Hashtableurile au chaining pentru situatia in care se produce o coliziune, si de asemenea are resizing dupa formula mentionata in enunt.
+* Resizingul htableului consta in crearea unei noi tabele de dimensiunea specificata si parcurgerea, respectiv mutarea elementelor din primul hashtable in al doilea.
+* Flowul programului este urmatorul: se citeste comanda de la client si se vede tipul comenzii. Se iau datele de la stdin si in functie de comenzi si de tipul de date se verifica veridicitatea comenzii( sa existea cartea sau utilizatorul sau definitia, sa nu faca un utilizator ceva cu o carte pe care nu o are) si dupa se executa logica comenzii.
+* Toate comenzile date iau datele de la stdin intr-un vector de char, dar functiile de adaugat in htable sunt dinamice cu malloc, astfel in htable ajungand doar elemente alocate dinamic fix la dimensiunea necesara.
+* La final cand se da comanda de iesire eliberez partial ce aloc in hashtableuri avand in vedere ca trebuie sa le parcurg pe toate pentru a calcula rankingul atat al utilizatorilor cat si al cartilor.
+
+### Comentarii asupra temei:
+
+* Realizand tema imi dau seama ca poate la laborator am complicat putin rezolvarea hashtable-ului si ca o puteam face un pic mai usor, lucru care m-a incurcat putin in rezolvarea valgrindului.
+* Din aceasta tema am invatat cum pot sa folosesc un hashtable generic pe mai multe structuri, nu doar pe siruri de caractere si m-a ajutat sa realizez cum sunt asezate in memorie structurile si cum functioneaza programul.
+* De asemenea am invatat sa lucrez mai bine cu pointerii
